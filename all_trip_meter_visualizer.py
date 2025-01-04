@@ -42,7 +42,7 @@ def update_plot():
         meter = f"trip_meter{i+1}"
         ax = axes[i]
         ax.clear()  # Clear the previous plot
-        ax.plot(time_data[meter][-3:], power_data[meter][-3:], label=f"{meter} (W)", color='blue')
+        ax.plot(time_data[meter], power_data[meter], label=f"{meter} (W)", color='blue')
         ax.set_xlabel("Time", fontsize=5) 
         ax.set_ylabel("Power (W)", fontsize=5)
         ax.set_title(f"{meter} Power Over Time", fontsize=10)  # Set smaller font size for title
