@@ -42,7 +42,7 @@ def fetch_current_value():
 # Function to update the plot for {selected_meter}
 def update_plot():
     ax.clear()  # Clear the previous plot
-    ax.plot(time_data[selected_meter][-5:], power_data[selected_meter][-5:], label=selected_meter+" (W)", color='blue')
+    ax.plot(time_data[selected_meter], power_data[selected_meter], label=selected_meter+" (W)", color='blue')
     ax.set_xlabel("Time")
     ax.set_ylabel("Power (W)")
     ax.set_title(f"{selected_meter} Power Over Time")
